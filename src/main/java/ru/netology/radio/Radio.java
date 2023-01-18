@@ -21,14 +21,17 @@ public class Radio {
     public void next() {
         if (currentRadioStation < 9) {
             currentRadioStation++;
-        } else currentRadioStation = 0;
-
+        } else {
+            currentRadioStation = 0;
+        }
     }
 
     public void prev() {
         if (currentRadioStation > 0) {
             currentRadioStation--;
-        } else currentRadioStation = 9;
+        } else {
+            currentRadioStation = 9;
+        }
     }
 
     public int getSoundVolume() {
@@ -48,12 +51,16 @@ public class Radio {
     public void increaseVolume() {
         if (soundVolume < 10) {
             soundVolume++;
-        } else soundVolume = 0;
+        } else {
+            soundVolume = 10;
+        }
     }
 
     public void reduceVolume() {
         if (soundVolume > 0) {
             soundVolume--;
-        } else soundVolume = 10;
+        } else {
+            soundVolume = 0;
+        }
     }
 }
